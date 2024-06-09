@@ -1,27 +1,79 @@
-# FirstApp
+# Projet Angular - Gestion des Produits 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
+## Introduction
 
-## Development server
+Ce projet est une application Angular pour la gestion des produits. Il permet aux utilisateurs d'ajouter, de mettre à jour, de supprimer et de lister des produits. L'application inclut également une fonctionnalité d'authentification pour sécuriser l'accès.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Fonctionnalités
 
-## Code scaffolding
+- Ajouter un produit avec nom, description, prix, et image.
+- Mettre à jour les informations des produits existants.
+- Supprimer des produits.
+- Filtrer les produits.
+- Favoris.
+- Authentification des utilisateurs.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Prérequis
 
-## Build
+- Angular CLI
+- Node.js (v12 ou supérieur)
+- Un serveur backend (simulé avec JSON Server dans cet exemple)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Installation
 
-## Running unit tests
+1. Clonez le dépôt
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    ```sh
+    git clone https://github.com/votre-utilisateur/votre-repo.git
+    cd votre-repo
+    ```
 
-## Running end-to-end tests
+2. Installez les dépendances
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+    ```sh
+    npm install
+    ```
 
-## Further help
+3. Lancez le serveur backend (en utilisant JSON Server)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+    ```sh
+    npm install -g json-server
+    json-server --watch db.json --port 3000
+    ```
+
+4. Démarrez l'application Angular
+
+    ```sh
+    ng serve
+    ```
+
+5. Ouvrez votre navigateur et accédez à `http://localhost:4200`.
+
+## Utilisation
+
+- **Page de Connexion**: Entrez vos informations d'identification pour vous connecter.
+- **Tableau de Bord**: Accédez à vos produits, ajoutez-en de nouveaux, mettez à jour ou supprimez des produits existants.
+- **Filtres**: Utilisez les filtres par mots clés.
+
+## API
+
+L'application utilise un serveur backend JSON Server pour simuler une API REST. Les principales routes API incluent :
+
+- `GET /products` - Récupère la liste des produits
+- `POST /products` - Ajoute un nouveau produit
+- `PATCH /products/:id` - Met à jour un produit existant
+- `DELETE /products/:id` - Supprime un produit
+
+## Contribution
+
+Les contributions sont les bienvenues ! Pour commencer :
+
+1. Fork le projet
+2. Créez une branche pour votre fonctionnalité (`git checkout -b feature/AmazingFeature`)
+3. Commitez vos changements (`git commit -m 'Add some AmazingFeature'`)
+4. Poussez votre branche (`git push origin feature/AmazingFeature`)
+5. Ouvrez une Pull Request
+
+## Licence
+
+Distribué sous la licence MIT. Voir `LICENSE` pour plus d'informations.
