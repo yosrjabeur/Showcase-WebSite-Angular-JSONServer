@@ -24,7 +24,7 @@ Ce projet est une application Angular pour la gestion des produits. Il permet au
 1. Clonez le dépôt
 
     ```sh
-    git clone https://github.com/votre-utilisateur/votre-repo.git
+    git clone https://github.com/votre-utilisateur/votre-repo](https://github.com/yosrjabeur/Showcase-WebSite-Angular-JSONServer.git
     cd votre-repo
     ```
 
