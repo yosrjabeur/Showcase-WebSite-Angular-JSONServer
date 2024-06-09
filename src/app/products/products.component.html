@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<title>Products</title>
+<style>
+    .search-bar {
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+    <div class="spinner-border" role="status" *ngIf="loading">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <app-dashboard [totalProducts]="totalProducts" [checkedProducts]="checkedProducts" [pageSize]="pageSize" [currentPage]="currentPage"></app-dashboard>
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="search-bar input-group">
+                <input type="text" [(ngModel)]="searchTerm" id="searchInput" class="form-control" placeholder="Search products...">
+                <div class="input-group-append">
+                    <button class="btn btn-brown" type="button" (click)="searchProducts()">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-brown brown-text" (click)="viewFavorites()">View Favorites</button>
+    <table id="productTable" class="table table-hover">
+        <thead>
+            <tr>
+                <th>Favoris</th>
+                <th>Photo</th> 
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Delete</th>
+                <th>Update</th>
+                <th>Details</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products">
+                <td><i class="bi bi-heart" [class.text-danger]="product.cheked" (click)="toggleChecked(product)"></i></td> 
+                <td> <img class="card-img-top" [src]="product.photo" alt="Product Image"style="max-width: 150px;"></td>
+                <td>{{ product.id }}</td>
+                <td>{{ product.nom }}</td>
+                <td>{{ product.prix }}</td>
+                <td>
+                    <button class="btn btn-danger" (click)="deleteProduct(product.id)">Delete</button>
+                </td>
+                <td>
+                    <i class="bi bi-pencil" (click)="editProduct(product)"></i>     
+                </td>     
+                <td>
+                    <button class="btn btn-dark" (click)="showDetails(product.id)">Détails</button>
+                </td>
+                   
+            </tr>
+        </tbody>
+    </table>
+    <ul class="nav nav-pills">
+        <li *ngFor="let page of [].constructor(totalPages); let i=index">
+            <button (click)="goToPage(i + 1)" [class]="i + 1 !== currentPage ? 'btn btn-hover-brown' : 'btn btn-brown active-page'"> {{ i + 1 }}</button>
+        </li>
+      </ul>
+      
+      
+
+    </body>
+    </html>
+
+

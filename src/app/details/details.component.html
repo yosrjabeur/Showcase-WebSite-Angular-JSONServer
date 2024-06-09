@@ -1,0 +1,16 @@
+<div class="container">
+    <div *ngIf="product" class="mt-5">
+      <h1 class="mb-4">Détails du produit</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <p><strong>ID:</strong> {{ product.id }}</p>
+          <p><strong>Nom:</strong> {{ product.nom }}</p>
+          <p><strong>Description:</strong> {{ product.description }}</p>
+          <p><strong>Prix:</strong> {{ product.prix }}</p>
+        </div>
+        <div class="col-md-6">
+          <img class="img-fluid" [src]="product.photo" alt="Product Image">
+        </div>
+      </div>
+    </div>
+  </div>

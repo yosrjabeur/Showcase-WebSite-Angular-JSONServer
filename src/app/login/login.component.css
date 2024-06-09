@@ -1,0 +1,21 @@
+.border-brown {
+    border: 2px solid #8B4513; /* Couleur marron */
+  }
+  
+  .bg-brown {
+    background-color: #8B4513; /* Couleur marron */
+  }
+  
+  .btn-brown {
+    background-color: #8B4513; /* Couleur marron */
+    color: white;
+  }
+  
+  .btn-brown:hover {
+    background-color: #703b1c; /* Couleur marron plus foncée au survol */
+  }
+  
+  .form-control-lg {
+    height: 50px; /* Hauteur des inputs plus grande */
+  }
+  

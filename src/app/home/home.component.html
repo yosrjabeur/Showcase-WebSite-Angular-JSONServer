@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Embroidery Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #fff;
+      padding: 20px;
+      border-bottom: 2px solid #ccc;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+    .navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    .navbar li {
+      margin-right: 20px;
+    }
+    .hero-section {
+      background-color: #fff;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .hero-section h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #555;
+    }
+    .hero-section p {
+      font-size: 18px;
+      margin-bottom: 40px;
+      color: #777;
+    }
+    .btn-shop {
+      background-color: #693e06;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .btn-shop:hover {
+      background-color: #4e2e04;
+    }
+    .service-section {
+      background-color: #f9f9f9;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .service-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .service-card h3 {
+      font-size: 24px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+    .service-card p {
+      font-size: 16px;
+      color: #777;
+    }
+    .about-section {
+      background-color: #f9f9f9;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .about-section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #555;
+    }
+    .about-section p {
+      font-size: 16px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <section class="hero-section">
+    <h1>Welcome to our embroidery store</h1>
+    <p>Our brand embodies essential values, offering not only unique products but also an authentic and meaningful experience for our customers.</p>
+    <a class="btn-shop" routerLink="/admin/products" routerLinkActive="active">Shop Now</a>
+  </section>
+
+  <section class="service-section">
+    <div class="service-card">
+      <h3>Embroidery with Quality</h3>
+      <p>We provide high-quality embroidery services using the finest materials.</p>
+    </div>
+    <div class="service-card">
+      <h3>Embroidery Made with Love</h3>
+      <p>Each embroidery piece is crafted with love and attention to detail.</p>
+    </div>
+    <div class="service-card">
+      <h3>Embroidery at Good Prices</h3>
+      <p>Get beautiful embroidery at affordable prices without compromising on quality.</p>
+    </div>
+  </section>
+
+  <footer class="about-section">
+    <h2>About Us</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum est ut ipsum sagittis, vel malesuada felis ultricies. Suspendisse potenti.</p>
+  </footer>
+</body>
+</html>
